@@ -1,12 +1,12 @@
 return {
 
---[[     {
+     {
         "thesimonho/kanagawa-paper.nvim",
         lazy = false,
         priority = 1000,
         opts = {},
     },
- ]]
+
 --[[     {
         'shaunsingh/nord.nvim',
         name = 'nord',
@@ -59,8 +59,8 @@ return {
                     }
                 end
             })
-            vim.cmd("set background=dark")
-            vim.cmd("colorscheme kanagawa-dragon")
+            --vim.cmd("set background=dark")
+            --vim.cmd("colorscheme kanagawa-dragon")
         end,
     },
 
@@ -70,9 +70,8 @@ return {
         lazy = false,
         priority = 1000,
         config = function()
-            require("everforest").setup({
-                --vim.cmd("colorscheme miasma")
-            })
+            vim.cmd("set background=dark")
+            vim.cmd("colorscheme everforest")
         end,
     },
 

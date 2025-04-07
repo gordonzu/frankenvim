@@ -3,11 +3,11 @@ vim.g.mapleader = " "
 
 -- [[ Basic Keymaps ]]
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+vim.keymap.set('n', '<C-l>', ":lua Snacks.notifier.show_history()<CR>", { desc = "Show error log" })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 vim.keymap.set("n", "<leader>x", vim.cmd.bd)
 vim.keymap.set("n", "<leader>]", vim.cmd.bnext)
 vim.keymap.set("n", "<leader>[", vim.cmd.bprev)
-vim.keymap.set("n", "<C-t>", ":Neotree toggle<CR>")
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 vim.keymap.set("n", "<C-o>", "<CMD>Oil --float .<CR>", { desc = "Open floating window" })
 
@@ -24,6 +24,13 @@ vim.keymap.set('n', '<C-x>',
     function()
         vim.cmd('set background=dark')
         vim.cmd('colorscheme kanagawa-dragon')
+    end
+)
+
+vim.keymap.set('n', '<C-y>',
+    function()
+        vim.cmd('set background=dark')
+        vim.cmd('colorscheme kanagawa-paper')
     end
 )
 
