@@ -4,7 +4,7 @@ return {
   specs = {
     {
       "AstroNvim/astrocore",
-      opts = {
+      --[[ opts = {
         options = {
           opt = {
             foldcolumn = "1", -- display fold column
@@ -15,13 +15,13 @@ return {
             foldtext = "", -- use transparent foldtext
           },
         },
-      },
+      }, ]]
     },
   },
   ---@type AstroUIOpts
   opts = {
     --colorscheme = "astrotheme",
-    folding = {
+     folding = {
       enabled = function(bufnr) return require("astrocore.buffer").is_valid(bufnr) end,
       methods = { "lsp", "treesitter", "indent" },
     },
@@ -144,6 +144,7 @@ return {
         selectedLineBgColor = { bg = "Visual" }, -- set to `default` to have no background colour
         unstagedChangesColor = { fg = "DiagnosticError" },
       },
-    },
+    }, 
   },
 }
+
